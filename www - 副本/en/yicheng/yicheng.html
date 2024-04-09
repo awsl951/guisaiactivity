@@ -1,0 +1,588 @@
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   大会议程 |2024西湖论剑·数字安全大会
+  </title>
+  <link rel="stylesheet" href="/public/dist/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+  <style>
+   body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .semi-transparent-bg {
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+    .h-64{
+        margin-top: 5rem;
+    }
+    .space-x-4 a{
+        color:#004A99 ;
+        font-weight: bold;
+    }
+
+    .denglu {
+            color: aliceblue;
+            font-weight: bold;
+            font-size: 14px;
+            position: relative;
+            left: 1.7rem;
+        }
+
+        .DL {
+            width: 100PX;
+            height: 30PX;
+            padding: 3px 8px;
+            border-radius: 1.5rem;
+            background-color: #004A99;
+            position: relative;
+            left: 3.3rem;
+            top: -0.21em;
+        }
+        header{
+            height: 6rem;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header img{
+            width: 230px;
+            height: 73px;
+            position: relative;
+            left: 1.7rem;
+            top: -0.2rem;
+        }
+        nav{
+            position: relative;
+            left: -1.5rem;
+            top: -0.3rem;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        nav a {
+            position: relative;
+            padding-right: 0.85rem !important;
+        }
+    .space-x-4 a:hover{
+        color:#678aac ;
+    }
+    .DL:hover{
+        background-color:rgb(36, 44, 67) ;
+    }
+
+    #category-list {
+    display: grid;
+    grid-template-columns: repeat(2, 8rem);
+}
+
+#category-list li {
+    list-style: none;
+    background-color: white;
+    border: 1px solid #d4d4d4;
+    box-shadow: 0 3px 2px rgba(2, 43, 250, 0.2); /* 调整阴影参数 */
+    color: #15354a;
+    padding: 12px;
+    margin: 1px;
+    margin-left: 3rem;
+    width: 130px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#category-list li.active {
+        background-color: #1E3A8A;
+        color: white;
+    }
+
+    .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+.subscribe{
+    margin-left: 39rem;
+            position: relative;
+            top: -2rem;
+            color: #004A99;
+            font-size: x-large;
+}
+.subscribe-link{
+            margin-left: 39rem;
+            position: relative;
+            top: -6.5rem;
+            color: #004A99;
+            font-size: x-large;
+}
+.divider2{
+    width: 15%;
+        height: 3px;
+        background-color:#90bae8;
+        margin-top: -1rem;
+        border-radius: 1rem;
+        position: relative;
+        top: -8px;
+        /* margin-bottom: 15px; */
+        /* margin-left: 35.5rem; */
+        opacity: 0.8;
+}
+.divider {
+        width: 95%;
+        height: 1px;
+        background-color:#a0c5ec;
+        margin-top: -8px;
+        margin-bottom: 20px;
+        /* margin-left: 35.5rem; */
+        opacity: 0.8;
+    }
+    #text{
+        margin-left: 20rem;
+        margin-top: -5rem;
+    }
+
+
+
+    .gradient-line {
+    width: 1.3px;
+    height: 120px;
+    background: linear-gradient(to bottom, #9238e6, #FFFFFF);
+    position: absolute;
+    top: 30;
+    left: 0;
+    z-index: 999999;
+}
+
+.border-t {
+    position: relative;
+    padding-left: 5px; /* Adjust as needed */
+}
+
+.Title .title {
+            text-align: center;
+            /* margin-left: 10rem; */
+            /* margin-top: 10rem; */
+            padding-top: 4rem;
+        }
+
+        .Title .title {
+            color: #fafcfd;
+            /* margin-bottom: 4rem; */
+        }
+
+        .Title .title h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .Title .title span:last-child {
+            font-size: 1.2rem;
+        }
+
+        .huodong {
+            margin-top: 7rem;
+        }
+/* 定义渐变动画 */
+@keyframes fadeInFromLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* 应用动画到目标内容 */
+    .fadeInLeft {
+        animation: fadeInFromLeft 1s ease-out;
+    }
+/* Your existing CSS styles go here */
+
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-blue-200 to-white">
+
+    <div class="fixed w-full z-10 top-0">
+        <header class="bg-white shadow-md">
+         <div class="container mx-auto flex justify-between items-center py-4 px-6">
+          <img alt="2023西湖数字安全会议 Logo" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240311212919.png"/>
+          <nav class="flex space-x-4">
+           <a class="text-blue-600 font-semibold" href="http://127.0.0.1:5500/index.html#">
+            首页
+           </a>
+           <a class="text-gray-600" href="/en/yicheng/yicheng.html">
+            大会议程
+           </a>
+           <a class="text-gray-600" href="/en/daka/zj.html">
+            大咖云集
+           </a>
+           <a class="text-gray-600" href="/en/news/jchd.html">
+            精彩活动
+           </a>
+           <a class="text-gray-600" href="/en/zhanshang/zhanshang.html">
+            展商风采
+           </a>
+           <a class="text-gray-600" href="/en/black-1/1.html">
+            成果发布
+           </a>
+           <a class="text-gray-600" href="/en/meiti/meiti.html">
+            媒体中心
+           </a>
+           <a class="text-gray-600" href="/en/zhibo/Zhibo1.html">
+            大会直播
+           </a>
+           <a class="text-gray-600" href="/en/information/information.html">
+            个人中心
+          </a>
+          </nav>
+          <div class="DL">
+          <button class="denglu" href="#popover-login" accent tiny>
+            登录
+            </button>
+        </div>
+          <div class="flex items-center space-x-2">
+           <button class="text-gray-600">
+            <i class="fas fa-search">
+            </i>
+           </button>
+           <button class="text-gray-600">
+            <i class="fas fa-user-circle">
+            </i>
+           </button>
+          </div>
+         </div>
+        </header>
+       </div>
+
+
+
+  
+
+  <div class="bg-blue-900 h-64">
+    <div class="Title">
+        <div id="liangdian" data-wow-duration="1s"
+            class="title wow animate__animated animate__fadeInDown"
+            style="visibility: visible; animation-duration: 1s;">
+            <h1>大会议程</h1> <span>2024西湖论剑·数字安全大会</span>
+        </div>
+    </div>
+</div>
+<div class="flex justify-between items-start px-40 -mt-11">
+    <div class="bg-white w-1/3 p-5">
+        <div class="text-blue-900 text-2xl mb-5 fadeInLeft" style="margin-top: 4rem;margin-left: 3rem;">议程</div>
+        <div class="leftpage">
+            <ul class="mt-4 space-y-2 grid grid-cols-2 gap-4" id="category-list">
+                <li class="text-white">
+                    全部
+                </li>
+                <li class="text-blue-200">
+                    主论坛
+                </li>
+                <li class="text-blue-200">
+                    平行论坛
+                </li>
+                <li class="text-blue-200">
+                    科普论坛
+                </li>
+                <li class="text-blue-200">
+                    掌上论剑
+                </li>
+                <li class="text-blue-200">
+                    生态合作论坛
+                </li>
+            </ul>
+        </div>
+        <div class="text-blue-900 text-2xl mb-5 fadeInLeft" style="margin-top: 1.5rem;margin-left: 3rem;">时间</div>
+        <div class="">
+            <ul class="mt-4 space-y-2 grid grid-cols-2 gap-4" id="category-list">
+                <li class="text-white">
+                    全部
+                </li>
+                <li class="text-blue-200">
+                    5月5日
+                </li>
+                <li class="text-blue-200">
+                    5月6日
+                </li>
+                <li class="text-blue-200">
+                    5月7日
+                </li>
+                <li class="text-blue-200">
+                    5月8日
+                </li>
+                <li class="text-blue-200">
+                    5月9日
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-white w-2/3 p-5">
+        <div class="mt-6 content active" id="content-all" style="margin-left: 2rem;">
+        <div class="flex justify-between items-center mb-5">
+            <div class="text-blue-900 text-2xl" style="margin-top: 3rem;">5月5日</div>
+            <div class="flex items-center" style="margin-right: 3rem;">
+                <input type="text" placeholder="请输入议程名称进行搜索" class="border p-2">
+                <button class="ml-2 text-blue-500"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="border-t pt-5">
+            <div class="gradient-line"></div>
+            <div class="divider2"></div>
+            <div class="divider"></div>
+            <div class="text-blue-900 text-xl mb-2">格致论道@西湖论剑</div>
+            <div class="mb-5">
+                <div class="text-2xl">18:00 - 21:00</div>
+                <div class="text-gray-600">杭州市滨江区文化中心剧院一层</div>
+            </div>
+            <div id="text" class="text-blue-900 text-xl mb-5">数字经济高峰论坛</div>
+            <a href="other_page.html" class="subscribe">
+                <span class="arrow-icon">➔</span>
+            </a>
+            <a class="subscribe-link" class="text-white px-3 py-1 text-xs rounded"style="color: #004A99;font-size: 14px;">
+                                                    订阅+
+            </a>
+            </div>
+            
+            <div class="border-t pt-5">
+                <div class="gradient-line"></div>
+                <div class="divider" style="margin-top: -2rem;"></div>
+                <div class="text-blue-900 text-xl mb-2">95后极客青年Talk</div>
+                <div class="mb-5">
+                    <div class="text-2xl">10:00 - 10:30</div>
+                    <div class="text-gray-600">线上直播</div>
+                </div>
+                <div id="text" class="text-blue-900 text-xl mb-5">可持续发展论坛</div>
+                <a href="other_page.html" class="subscribe">
+                    <span class="arrow-icon">➔</span>
+                </a>
+                <a class="subscribe-link" class="text-white px-3 py-1 text-xs rounded"style="color: #004A99;font-size: 14px;">
+                    订阅+
+                </a>
+            </div>
+
+            <div class="border-t pt-5">
+                <div class="gradient-line"></div>
+                <div class="divider" style="margin-top: -2rem;"></div>
+                <div class="text-blue-900 text-xl mb-2">人工智能会颠覆安全行业吗？</div>
+                <div class="mb-5">
+                    <div class="text-2xl">13:00 - 13:30</div>
+                    <div class="text-gray-600">线上直播</div>
+                </div>
+                <div id="text" class="text-blue-900 text-xl mb-5">可持续发展论坛</div>
+                <a href="other_page.html" class="subscribe">
+                    <span class="arrow-icon">➔</span>
+                </a>
+                <a class="subscribe-link" class="text-white px-3 py-1 text-xs rounded"style="color: #004A99;font-size: 14px;">
+                    订阅+
+                </a>
+            </div>
+
+            <div class="text-blue-900 text-2xl" style="margin-bottom: 1rem;margin-top: 2rem;">5月6日</div>
+            <div class="border-t pt-5">
+                <div class="gradient-line"></div>
+                <div class="divider2"></div>
+                <div class="divider"></div>
+                <div class="text-blue-900 text-xl mb-2">反诈直播间@西湖论剑</div>
+                <div class="mb-5">
+                    <div class="text-2xl">15:30 - 16:30</div>
+                    <div class="text-gray-600">线上直播 </div>
+                </div>
+                <div id="text" class="text-blue-900 text-xl">人工智能未来论坛</div>
+                <a href="other_page.html" class="subscribe">
+                    <span class="arrow-icon">➔</span>
+                </a>
+                <a class="subscribe-link" class="text-white px-3 py-1 text-xs rounded"style="color: #004A99;font-size: 14px;">
+                    订阅+
+                </a>
+            </div>
+        
+    </div>
+
+
+
+    <div class="mt-6 content" id="content-forum">
+        <div class="flex justify-between items-center mb-5">
+            <div class="text-blue-900 text-2xl">5月5日</div>
+            <div class="flex items-center">
+                <input type="text" placeholder="请输入议程名称进行搜索" class="border p-2">
+                <button class="ml-2 text-blue-500"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="border-t pt-5">
+            <div class="text-blue-900 text-xl mb-2">新加坡会场</div>
+            <div class="mb-5">
+                <div class="text-2xl">09:00 - 12:00</div>
+                <div class="text-gray-600">新加坡圣淘沙娱乐场GrandBall Room</div>
+            </div>
+            <div id="text" class="text-blue-900 text-xl mb-5">数字经济高峰论坛</div>
+            
+            <div class="border-t pt-5">
+                <div class="text-blue-900 text-xl mb-2">北京会场</div>
+                <div class="mb-5">
+                    <div class="text-2xl">13:00 - 15:00</div>
+                    <div class="text-gray-600">北京国家会议中心主会场</div>
+                </div>
+                <div id="text" class="text-blue-900 text-xl mb-5">可持续发展论坛</div>
+            </div>
+            
+            <div class="border-t pt-5">
+                <div class="text-blue-900 text-xl mb-2">上海会场</div>
+                <div class="mb-5">
+                    <div class="text-2xl">16:00 - 18:00</div>
+                    <div class="text-gray-600">上海国际会议中心小会议室</div>
+                </div>
+                <div id="text" class="text-blue-900 text-xl">人工智能未来论坛</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mt-6 content" id="content-hackathon">
+
+    </div>
+
+    <div class="mt-6 content" id="content-salon">
+        
+    </div>
+
+    <div class="mt-6 content" id="content-dier">
+        
+    </div>
+
+    <div class="mt-6 content" id="content-zs">
+        
+    </div>
+
+    
+    </div>
+
+
+
+
+    
+    
+</div>
+
+
+
+
+
+
+
+ </body>
+
+ <script>
+       // 获取ul元素和content元素
+       const categoryList = document.getElementById('category-list');
+    const contentAll = document.getElementById('content-all');
+    const contentForum = document.getElementById('content-forum');
+    const contentHackathon = document.getElementById('content-hackathon');
+    const contentSalon = document.getElementById('content-salon');
+    const contentDier = document.getElementById('content-dier');
+    const contentZs = document.getElementById('content-zs');
+
+    // 添加事件监听器
+    categoryList.addEventListener('click', function (event) {
+        // 获取被点击的li元素的文本内容
+        const selectedCategory = event.target.textContent.trim();
+
+        // 隐藏所有内容区域
+        contentAll.classList.remove('active');
+        contentForum.classList.remove('active');
+        contentHackathon.classList.remove('active');
+        contentSalon.classList.remove('active');
+        contentDier.classList.remove('active');
+        contentZs.classList.remove('active');
+
+        // 根据选择的类别显示相应的内容区域
+        switch (selectedCategory) {
+            case '全部':
+                contentAll.classList.add('active');
+                break;
+            case '新闻发布会':
+                contentForum.classList.add('active');
+                break;
+            case '开幕式':
+                contentHackathon.classList.add('active');
+                break;
+            case '主论坛':
+                contentSalon.classList.add('active');
+                break;
+            case '高峰论坛':
+                contentDier.classList.add('active');
+                break;
+            case '专题论坛':
+                contentZs.classList.add('active');
+                break;
+            default:
+                // 处理其他情况
+                break;
+        }
+    });
+
+// 获取所有的 li 元素
+const listItems = document.querySelectorAll('#category-list li');
+
+// 获取第一个li元素
+const firstListItem = document.querySelector('#category-list li:first-child');
+
+// 添加点击事件监听器
+listItems.forEach(item => {
+    item.addEventListener('click', function() {
+        // 移除所有 li 元素的背景色和字体颜色
+        listItems.forEach(li => {
+            li.classList.remove('active');
+        });
+
+        // 设置当前点击的 li 元素的背景色和字体颜色
+        this.classList.add('active');
+
+        // 如果当前点击的不是第一个li元素，则恢复第一个li元素的样式
+        if (this !== firstListItem) {
+            firstListItem.style.backgroundColor = '';
+            firstListItem.style.color = '';
+        }
+    });
+});
+
+// 在页面加载完成后执行
+window.onload = function() {
+    // 将第一个li元素的背景色设置为深蓝色
+    firstListItem.style.backgroundColor = '#1E3A8A';
+    firstListItem.style.color = 'white';
+};
+
+
+
+
+// 获取所有具有.subscribe-link类的元素
+const subscribeLinks = document.querySelectorAll('.subscribe-link');
+
+// 遍历每个元素，并为其添加点击事件监听器
+subscribeLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // 检查链接文本内容是否为"订阅"
+        if (this.textContent.trim() === '订阅+') {
+            // 如果是，将文本内容改为"已订阅"
+            this.textContent = '已订阅';
+        } else {
+            // 否则，将文本内容改回"订阅"
+            this.textContent = '订阅+';
+        }
+    });
+});
+
+new WOW().init();
+ </script>
+</html>

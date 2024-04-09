@@ -1,0 +1,852 @@
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   大咖云集 |2024西湖论剑·数字安全大会
+  </title>
+  <link rel="stylesheet" href="/public/dist/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+  <style>
+   body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .semi-transparent-bg {
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+    .pt-6 h1{
+        margin-top: 80px;
+    }
+    .space-x-4 a{
+        color:#004A99 ;
+        font-weight: bold;
+    }
+    .space-x-4 a:hover{
+        color:#678aac ;
+    }
+    .DL:hover{
+        background-color:rgb(36, 44, 67) ;
+    }
+
+    .denglu {
+            color: aliceblue;
+            font-weight: bold;
+            font-size: 14px;
+            position: relative;
+            left: 1.7rem;
+        }
+
+        .DL {
+            width: 100PX;
+            height: 30PX;
+            padding: 3px 8px;
+            border-radius: 1.5rem;
+            background-color: #004A99;
+            position: relative;
+            left: 3.3rem;
+            top: -0.21em;
+        }
+        header{
+            height: 6rem;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header img{
+            width: 230px;
+            height: 73px;
+            position: relative;
+            left: 1.7rem;
+            top: -0.2rem;
+        }
+        nav{
+            position: relative;
+            left: -1.5rem;
+            top: -0.3rem;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        nav a {
+            position: relative;
+            padding-right: 0.85rem !important;
+        }
+    .mb-6 .title {
+            text-align: center;
+            /* padding-top: 9rem; */
+          }
+
+          .mb-6 .title {
+            color: #004A99;
+            margin-bottom: 4rem;
+          }
+
+          .mb-6 .title h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+          }
+
+          .mb-6 .title span:last-child {
+            font-size: 1.4rem;
+          }
+
+          .hidden {
+      display: none;
+    }
+
+
+#category-list {
+    display: grid;
+    width: 50%;
+    margin-left: 23rem;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+#category-list button {
+    list-style: none;
+    background-color: white;
+    border: 1px solid #bbbcbc;
+    box-shadow: 0 3px 2px rgba(1, 30, 172, 0.2); /* 调整阴影参数 */
+    color: #15354a;
+    padding: 10px;
+    margin: 10px;
+    width: 130px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#category-list button.active {
+        background-color: #1E3A8A;
+        color: white;
+    }
+    .Title .title {
+            text-align: center;
+            /* margin-left: 10rem; */
+            /* margin-top: 10rem; */
+            padding-top: 4rem;
+        }
+
+        .Title .title {
+            color: #fafcfd;
+            /* margin-bottom: 4rem; */
+        }
+
+        .Title .title h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .Title .title span:last-child {
+            font-size: 1.2rem;
+        }
+
+        .huodong {
+            margin-top: 7rem;
+        }
+        @keyframes fadeInFromLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* 应用动画到目标内容 */
+    .fadeInLeft {
+        animation: fadeInFromLeft 1s ease-out;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-blue-200 to-white">
+
+    <div class="fixed w-full z-10 top-0">
+        <header class="bg-white shadow-md">
+         <div class="container mx-auto flex justify-between items-center py-4 px-6">
+          <img alt="2023西湖数字安全会议 Logo" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240311212919.png"/>
+          <nav class="flex space-x-4">
+           <a class="text-blue-600 font-semibold" href="http://127.0.0.1:5500/index.html#">
+            首页
+           </a>
+           <a class="text-gray-600" href="/en/yicheng/yicheng.html">
+            大会议程
+           </a>
+           <a class="text-gray-600" href="/en/daka/zj.html">
+            大咖云集
+           </a>
+           <a class="text-gray-600" href="/en/news/jchd.html">
+            精彩活动
+           </a>
+           <a class="text-gray-600" href="/en/zhanshang/zhanshang.html">
+            展商风采
+           </a>
+           <a class="text-gray-600" href="/en/black-1/1.html">
+            成果发布
+           </a>
+           <a class="text-gray-600" href="/en/meiti/meiti.html">
+            媒体中心
+           </a>
+           <a class="text-gray-600" href="/en/zhibo/Zhibo1.html">
+            大会直播
+           </a>
+           <a class="text-gray-600" href="/en/information/information.html">
+            个人中心
+          </a>
+          </nav>
+          <div class="DL">
+          <button class="denglu" href="#popover-login" accent tiny>
+            登录
+            </button>
+        </div>
+          <div class="flex items-center space-x-2">
+           <button class="text-gray-600">
+            <i class="fas fa-search">
+            </i>
+           </button>
+           <button class="text-gray-600">
+            <i class="fas fa-user-circle">
+            </i>
+           </button>
+          </div>
+         </div>
+        </header>
+       </div>
+
+
+
+  <div class="bg-blue-900 h-64" style="margin-top: 5rem;">
+        <div class="Title">
+            <div id="liangdian" data-wow-duration="1s"
+                class="title wow animate__animated animate__fadeInDown"
+                style="visibility: visible; animation-duration: 1s;">
+                <h1>大咖云集</h1> <span>2024西湖论剑·数字安全大会</span>
+            </div>
+        </div>
+    </div>
+    
+  <div class="flex justify-between items-start px-40 -mt-11">
+    <div class="bg-white w-full p-5">
+   <div class="mt-10">
+    <div class="text-center mb-6 fadeInLeft">
+            <div id="liangdian" data-wow-duration="1s" class="title wow animate__animated"
+            style="visibility: visible; animation-duration: 1s;">
+            <h1>专家委员会</h1> <span>Conference Highlights</span>
+            </div>
+    </div>
+
+    <div class="flex items-center justify-center mb-6">
+        <span class="text-gray-400 text-2xl cursor-pointer" id="prevBtn">
+          <i class="fas fa-chevron-left"></i>
+        </span>
+        <div class="flex space-x-4 mx-4" id="committeeMembers">
+          <!-- Repeat for each committee member -->
+          <div class="committee-member rounded-full bg-white p-6 shadow-lg">
+            <img alt="Expert committee member with a formal attire and a neutral expression" class="rounded-full" src="https://placehold.co/100x100"/>
+            <p class="text-center text-sm mt-2">王晓明</p>
+            <p class="text-center text-xs text-gray-500">中国科学院大学 教授</p>
+          </div>
+
+          <div class="committee-member rounded-full bg-white p-6 shadow-lg">
+            <img alt="Expert committee member with a formal attire and a neutral expression" class="rounded-full" src="https://placehold.co/100x100"/>
+            <p class="text-center text-sm mt-2">王晓明</p>
+            <p class="text-center text-xs text-gray-500">中国科学院大学 教授</p>
+          </div>
+
+          <div class="committee-member rounded-full bg-white p-6 shadow-lg">
+            <img alt="Expert committee member with a formal attire and a neutral expression" class="rounded-full" src="https://placehold.co/100x100"/>
+            <p class="text-center text-sm mt-2">王晓明</p>
+            <p class="text-center text-xs text-gray-500">中国科学院大学 教授</p>
+          </div>
+
+          <div class="committee-member rounded-full bg-white p-6 shadow-lg">
+            <img alt="Expert committee member with a formal attire and a neutral expression" class="rounded-full" src="https://placehold.co/100x100"/>
+            <p class="text-center text-sm mt-2">王晓明</p>
+            <p class="text-center text-xs text-gray-500">中国科学院大学 教授</p>
+          </div>
+
+          <div class="committee-member rounded-full bg-white p-6 shadow-lg">
+            <img alt="Expert committee member with a formal attire and a neutral expression" class="rounded-full" src="https://placehold.co/100x100"/>
+            <p class="text-center text-sm mt-2">王晓明</p>
+            <p class="text-center text-xs text-gray-500">中国科学院大学 教授</p>
+          </div>
+
+          
+          <!-- ... other committee members ... -->
+        </div>
+        <span class="text-gray-400 text-2xl cursor-pointer" id="nextBtn">
+          <i class="fas fa-chevron-right"></i>
+        </span>
+      </div>
+
+    
+
+
+    <div class="text-center mb-6 fadeInLeft">
+        <div id="liangdian" data-wow-duration="1s" class="title wow animate__animated"
+        style="visibility: visible; animation-duration: 1s;">
+        <h1>演讲嘉宾</h1> <span>Conference Highlights</span>
+        </div>
+    </div>
+    
+    <!-- <div class="flex justify-center space-x-2 mb-4">
+     <button class="bg-blue-500 text-white px-4 py-2 rounded-full">
+      全部
+     </button>
+     <button class="text-blue-500 px-4 py-2 rounded-full border border-blue-500">
+      主题演讲（视频）
+     </button>
+     <button class="text-blue-500 px-4 py-2 rounded-full border border-blue-500">
+      5月5日
+     </button>
+     <button class="text-blue-500 px-4 py-2 rounded-full border border-blue-500">
+      5月7日
+     </button>
+     <button class="text-blue-500 px-4 py-2 rounded-full border border-blue-500">
+      5月8日
+     </button>
+     <button class="text-blue-500 px-4 py-2 rounded-full border border-blue-500">
+      演讲嘉宾列表
+     </button>
+    </div> -->
+    <div id="category-list" class="flex justify-center space-x-2 mb-4">
+        <!-- Buttons -->
+        <button id="content-all" class="toggle-btn bg-blue-500 text-white px-4 py-2 rounded-full" data-target="all">
+          全部
+        </button>
+        <button id="content-forum" class="toggle-btn text-blue-500 px-4 py-2 rounded-full border border-blue-500" data-target="theme">
+          主题演讲
+        </button>
+        <button id="content-hackathon" class="toggle-btn text-blue-500 px-4 py-2 rounded-full border border-blue-500" data-target="may5">
+          5月5日
+        </button>
+        <button id="content-salon" class="toggle-btn text-blue-500 px-4 py-2 rounded-full border border-blue-500" data-target="may7">
+          5月7日
+        </button>
+        <button id="content-dier" class="toggle-btn text-blue-500 px-4 py-2 rounded-full border border-blue-500" data-target="may8">
+          5月8日
+        </button>
+        <button id="content-zs" class="toggle-btn text-blue-500 px-4 py-2 rounded-full border border-blue-500" data-target="list">
+          演讲嘉宾列表
+        </button>
+    </div>
+    
+    <!-- <div class="grid grid-cols-4 gap-6"> -->
+    <!-- 
+     <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+      <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+      <p class="text-sm mt-2">
+       陈晓华
+      </p>
+      <p class="text-xs text-gray-500">
+       腾讯科技（深圳）有限公司 高级研究员
+      </p>
+      <div class="mt-2">
+       <span class="text-blue-500">
+        <i class="fas fa-play-circle">
+        </i>
+       </span>
+       <span class="text-gray-400 text-xs">
+        20+
+       </span>
+      </div>
+     </div>
+
+     <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+        <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+        <p class="text-sm mt-2">
+         陈晓华
+        </p>
+        <p class="text-xs text-gray-500">
+         腾讯科技（深圳）有限公司 高级研究员
+        </p>
+        <div class="mt-2">
+         <span class="text-blue-500">
+          <i class="fas fa-play-circle">
+          </i>
+         </span>
+         <span class="text-gray-400 text-xs">
+          20+
+         </span>
+        </div>
+       </div>
+       
+       <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+        <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+        <p class="text-sm mt-2">
+         陈晓华
+        </p>
+        <p class="text-xs text-gray-500">
+         腾讯科技（深圳）有限公司 高级研究员
+        </p>
+        <div class="mt-2">
+         <span class="text-blue-500">
+          <i class="fas fa-play-circle">
+          </i>
+         </span>
+         <span class="text-gray-400 text-xs">
+          20+
+         </span>
+        </div>
+       </div>
+
+       <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+        <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+        <p class="text-sm mt-2">
+         陈晓华
+        </p>
+        <p class="text-xs text-gray-500">
+         腾讯科技（深圳）有限公司 高级研究员
+        </p>
+        <div class="mt-2">
+         <span class="text-blue-500">
+          <i class="fas fa-play-circle">
+          </i>
+         </span>
+         <span class="text-gray-400 text-xs">
+          20+
+         </span>
+        </div>
+       </div>
+
+       <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+        <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+        <p class="text-sm mt-2">
+         陈晓华
+        </p>
+        <p class="text-xs text-gray-500">
+         腾讯科技（深圳）有限公司 高级研究员
+        </p>
+        <div class="mt-2">
+         <span class="text-blue-500">
+          <i class="fas fa-play-circle">
+          </i>
+         </span>
+         <span class="text-gray-400 text-xs">
+          20+
+         </span>
+        </div>
+       </div>
+
+       <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+        <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+        <p class="text-sm mt-2">
+         陈晓华
+        </p>
+        <p class="text-xs text-gray-500">
+         腾讯科技（深圳）有限公司 高级研究员
+        </p>
+        <div class="mt-2">
+         <span class="text-blue-500">
+          <i class="fas fa-play-circle">
+          </i>
+         </span>
+         <span class="text-gray-400 text-xs">
+          20+
+         </span>
+        </div>
+       </div>
+
+       <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+        <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+        <p class="text-sm mt-2">
+         陈晓华
+        </p>
+        <p class="text-xs text-gray-500">
+         腾讯科技（深圳）有限公司 高级研究员
+        </p>
+        <div class="mt-2">
+         <span class="text-blue-500">
+          <i class="fas fa-play-circle">
+          </i>
+         </span>
+         <span class="text-gray-400 text-xs">
+          20+
+         </span>
+        </div>
+       </div>
+
+       <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+        <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+        <p class="text-sm mt-2">
+         陈晓华
+        </p>
+        <p class="text-xs text-gray-500">
+         腾讯科技（深圳）有限公司 高级研究员
+        </p>
+        <div class="mt-2">
+         <span class="text-blue-500">
+          <i class="fas fa-play-circle">
+          </i>
+         </span>
+         <span class="text-gray-400 text-xs">
+          20+
+         </span>
+        </div>
+       </div> -->
+
+
+
+
+       
+    
+
+      <div id="all" class="committee-list grid grid-cols-4 gap-6">
+        <!-- Committee members for "全部" -->
+        <!-- ... -->
+        <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             000000000
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+              <span class="text-blue-500">
+               <i class="fas fa-play-circle">
+               </i>
+              </span>
+              <span class="text-gray-400 text-xs">
+               20+
+              </span>
+             </a>
+           </div>
+
+           <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             000000000
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+              <span class="text-blue-500">
+               <i class="fas fa-play-circle">
+               </i>
+              </span>
+              <span class="text-gray-400 text-xs">
+               20+
+              </span>
+             </a>
+           </div>
+
+           <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             000000000
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+              <span class="text-blue-500">
+               <i class="fas fa-play-circle">
+               </i>
+              </span>
+              <span class="text-gray-400 text-xs">
+               20+
+              </span>
+             </a>
+           </div>
+
+           <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             000000000
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+             <span class="text-blue-500">
+              <i class="fas fa-play-circle">
+              </i>
+             </span>
+             <span class="text-gray-400 text-xs">
+              20+
+             </span>
+            </a>
+           </div>
+      </div>
+
+    
+
+      <div id="theme" class="committee-list hidden grid grid-cols-4 gap-6">
+        <!-- Committee members for "主题演讲（视频）" -->
+        <!-- ... -->
+        <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             11111111
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+              <span class="text-blue-500">
+               <i class="fas fa-play-circle">
+               </i>
+              </span>
+              <span class="text-gray-400 text-xs">
+               20+
+              </span>
+             </a>
+           </div>
+      </div>
+
+    
+      <div id="may5" class="committee-list hidden grid grid-cols-4 gap-6">
+        <!-- Committee members for "5月5日" -->
+        <!-- ... -->
+        <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             22222222
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+              <span class="text-blue-500">
+               <i class="fas fa-play-circle">
+               </i>
+              </span>
+              <span class="text-gray-400 text-xs">
+               20+
+              </span>
+             </a>
+           </div>
+
+           <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             22222222
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+              <span class="text-blue-500">
+               <i class="fas fa-play-circle">
+               </i>
+              </span>
+              <span class="text-gray-400 text-xs">
+               20+
+              </span>
+             </a>
+           </div>
+      </div>
+    
+      <div id="may7" class="committee-list hidden grid grid-cols-4 gap-6">
+        <!-- Committee members for "5月7日" -->
+        <!-- ... -->
+        <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             333333
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+              <span class="text-blue-500">
+               <i class="fas fa-play-circle">
+               </i>
+              </span>
+              <span class="text-gray-400 text-xs">
+               20+
+              </span>
+             </a>
+           </div>
+      </div>
+    
+      <div id="may8" class="committee-list hidden grid grid-cols-4 gap-6">
+        <!-- Committee members for "5月8日" -->
+        <!-- ... -->
+        <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             4444444
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+              <span class="text-blue-500">
+               <i class="fas fa-play-circle">
+               </i>
+              </span>
+              <span class="text-gray-400 text-xs">
+               20+
+              </span>
+             </a>
+           </div>
+
+           <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             4444444
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+              <span class="text-blue-500">
+               <i class="fas fa-play-circle">
+               </i>
+              </span>
+              <span class="text-gray-400 text-xs">
+               20+
+              </span>
+             </a>
+           </div>
+      </div>
+    
+      <div id="list" class="committee-list hidden grid grid-cols-4 gap-6">
+        <!-- Committee members for "演讲嘉宾列表" -->
+        <!-- ... -->
+        <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+            <img alt="Speaker with a microphone, wearing a suit" class="rounded-full mx-auto" src="https://placehold.co/100x100"/>
+            <p class="text-sm mt-2">
+             5555555
+            </p>
+            <p class="text-xs text-gray-500">
+             腾讯科技（深圳）有限公司 高级研究员
+            </p>
+            <a href="/en/daka/2page.html" class="mt-2">
+              <span class="text-blue-500">
+               <i class="fas fa-play-circle">
+               </i>
+              </span>
+              <span class="text-gray-400 text-xs">
+               20+
+              </span>
+             </a>
+           </div>
+
+ 
+      </div>
+
+       
+     <!-- ... other speakers ... -->
+    <!-- </div> -->
+   </div>
+  </div>
+  </div>
+ </body>
+ <script>
+    const toggleBtns = document.querySelectorAll('.toggle-btn');
+    const committeeLists = document.querySelectorAll('.committee-list');
+
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+
+        const target = this.dataset.target;
+        committeeLists.forEach(list => {
+          if (list.id === target) {
+            list.classList.remove('hidden');
+          } else {
+            list.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+
+
+
+
+
+
+
+    // 获取ul元素和content元素
+    const categoryList = document.getElementById('category-list');
+    const contentAll = document.getElementById('content-all');
+    const contentForum = document.getElementById('content-forum');
+    const contentHackathon = document.getElementById('content-hackathon');
+    const contentSalon = document.getElementById('content-salon');
+    const contentDier = document.getElementById('content-dier');
+    const contentZs = document.getElementById('content-zs');
+
+    // 添加事件监听器
+    categoryList.addEventListener('click', function (event) {
+        // 获取被点击的li元素的文本内容
+        const selectedCategory = event.target.textContent.trim();
+
+        // 隐藏所有内容区域
+        contentAll.classList.remove('active');
+        contentForum.classList.remove('active');
+        contentHackathon.classList.remove('active');
+        contentSalon.classList.remove('active');
+        contentDier.classList.remove('active');
+        contentZs.classList.remove('active');
+
+        // 根据选择的类别显示相应的内容区域
+        switch (selectedCategory) {
+            case '全部':
+                contentAll.classList.add('active');
+                break;
+            case '主题演讲':
+                contentForum.classList.add('active');
+                break;
+            case '5月5日':
+                contentHackathon.classList.add('active');
+                break;
+            case '5月7日':
+                contentSalon.classList.add('active');
+                break;
+            case '5月8日':
+                contentDier.classList.add('active');
+                break;
+            case '演讲嘉宾列表':
+                contentZs.classList.add('active');
+                break;
+            default:
+                // 处理其他情况
+                break;
+        }
+    });
+
+
+const listItems = document.querySelectorAll('#category-list button');
+// 获取第一个按钮元素
+const firstButton = document.querySelector('#category-list button:first-child');
+
+// 添加点击事件监听器
+listItems.forEach(item => {
+    item.addEventListener('click', function() {
+        // 移除所有 li 元素的背景色和字体颜色
+        listItems.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        // 设置当前点击的 li 元素的背景色和字体颜色
+        this.classList.add('active');
+
+        // 如果当前点击的不是第一个li元素，则恢复第一个li元素的样式
+        if (this !== firstButton) {
+            firstButton.style.backgroundColor = '';
+            firstButton.style.color = '';
+        }
+    });
+});
+
+// 在页面加载完成后执行
+window.onload = function() {
+    // 将第一个li元素的背景色设置为深蓝色
+    firstButton.style.backgroundColor = '#1E3A8A';
+    firstButton.style.color = 'white';
+};
+
+new WOW().init();
+ </script>
+</html>

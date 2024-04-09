@@ -1,0 +1,537 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        活动在线支付 |2024西湖论剑·数字安全大会
+    </title>
+    <link rel="stylesheet" href="/public/dist/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .space-x-4 a {
+            color: #004A99;
+            font-weight: bold;
+        }
+
+        .denglu {
+            color: aliceblue;
+            font-weight: bold;
+            font-size: 14px;
+            position: relative;
+            left: 1.7rem;
+        }
+
+        .DL {
+            width: 100PX;
+            height: 30PX;
+            padding: 3px 8px;
+            border-radius: 1.5rem;
+            background-color: #004A99;
+            position: relative;
+            left: 3.3rem;
+            top: -0.21em;
+        }
+        header{
+            height: 6rem;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header img{
+            width: 230px;
+            height: 73px;
+            position: relative;
+            left: 1.7rem;
+            top: -0.2rem;
+        }
+        nav{
+            position: relative;
+            left: -1.5rem;
+            top: -0.3rem;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        nav a {
+            position: relative;
+            padding-right: 0.85rem !important;
+        }
+
+        .space-x-4 a:hover {
+            color: #678aac;
+        }
+
+        .DL:hover {
+            background-color: rgb(36, 44, 67);
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        #button-style {
+            width: 130px;
+            height: 40px;
+            display: inline-block;
+            padding: 8px 30px;
+            font-weight: bold;
+            background-color: #fcfdfe;
+            border: 1px solid #09cb1f;
+            color: #09cb1f;
+            text-decoration: none;
+            border-radius: 1.5rem;
+            margin-top: 2rem;
+            margin-left: 2rem;
+        }
+
+        #button-style:hover {
+            background-color: #09cb1f;
+            color: #d4d4d4;
+        }
+
+
+
+
+        .Title .title {
+            text-align: center;
+            margin-left: 15rem;
+        }
+
+        .Title .title {
+            color: #004A99;
+            margin-bottom: 4rem;
+        }
+
+        .Title .title h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .Title .title span:last-child {
+            font-size: 1.2rem;
+        }
+
+        .huodong {
+            margin-top: 7rem;
+        }
+
+        .subscribe-link {
+            width: 130px;
+            height: 40px;
+            display: inline-block;
+            padding: 8px 36px;
+            font-weight: bold;
+            background-color: #fcfdfe;
+            border: 1px solid #ecd109;
+            color: #ecd109;
+            text-decoration: none;
+            border-radius: 1.5rem;
+            /* position: relative;
+            top: 2rem;
+            left: -2rem; */
+            margin-top: 2rem;
+            margin-left: -2rem;
+        }
+
+        .subscribe-link:hover {
+            background-color: #ecd109;
+            color:#fff;
+        }
+
+        /* 弹窗样式 */
+        /* #comment-popup {
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: none;
+  } */
+        #comment-popup,#comment-popup1 {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 9999999999;
+        }
+
+        #comment-popup,#comment-popup1 h2 {
+            margin-top: 0;
+        }
+
+        .price {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            margin-bottom: 20px;
+        }
+
+        .btn-container button {
+            margin: 0 10px;
+            padding: 10px 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .qr-code,
+        .qr-code1{
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+
+       
+
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="fixed w-full z-10 top-0">
+        <header class="bg-white shadow-md">
+            <div class="container mx-auto flex justify-between items-center py-4 px-6">
+                <img alt="2023西湖数字安全会议 Logo"
+                    src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240311212919.png" />
+                <nav class="flex space-x-4">
+                    <a class="text-blue-600 font-semibold" href="http://127.0.0.1:5500/index.html#">
+                        首页
+                    </a>
+                    <a class="text-gray-600" href="/en/yicheng/yicheng.html">
+                        大会议程
+                    </a>
+                    <a class="text-gray-600" href="/en/daka/zj.html">
+                        大咖云集
+                    </a>
+                    <a class="text-gray-600" href="/en/news/jchd.html">
+                        精彩活动
+                    </a>
+                    <a class="text-gray-600" href="/en/zhanshang/zhanshang.html">
+                        展商风采
+                    </a>
+                    <a class="text-gray-600" href="/en/black-1/1.html">
+                        成果发布
+                    </a>
+                    <a class="text-gray-600" href="/en/meiti/meiti.html">
+                        媒体中心
+                    </a>
+                    <a class="text-gray-600" href="/en/zhibo/Zhibo1.html">
+                        大会直播
+                    </a>
+                    <a class="text-gray-600" href="/en/information/information.html">
+                        个人中心
+                      </a>
+                </nav>
+                <div class="DL">
+                    <button class="denglu" href="#popover-login" accent tiny>
+                        登录
+                    </button>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button class="text-gray-600">
+                        <i class="fas fa-search">
+                        </i>
+                    </button>
+                    <button class="text-gray-600">
+                        <i class="fas fa-user-circle">
+                        </i>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="pt-24">
+        <div class="container mx-auto px-6">
+            <div class="bg-white shadow-md rounded-md">
+                <div class="md:flex">
+
+                    <div class="p-4" style="margin-left: 5rem;">
+                        <div class="flex justify-between items-center">
+                            <!-- <h2 class="text-xl font-bold text-gray-700">
+                                精彩活动
+                            </h2> -->
+                            <!-- <div class="Title">
+                                <div id="liangdian" data-wow-duration="1s"
+                                    class="title wow animate__animated animate__fadeInDown"
+                                    style="visibility: visible; animation-duration: 1s;">
+                                    <h1>活动票种</h1> <span>Activity Ticket</span>
+                                </div>
+                            </div> -->
+                            <!-- <div class="relative">
+                                <input class="pl-10 pr-4 py-2 rounded-md border border-gray-300" placeholder="搜索关键字..."
+                                    type="search" />
+                                <i class="fas fa-search absolute left-3 top-3 text-gray-400">
+                                </i>
+                            </div> -->
+                        </div>
+
+
+
+                        <div id="comment-popup" style="text-align: center;">
+                            <h1 style="font-size: 24px;">扫码支付</h1>
+                            <div class="price" style="color: crimson;">￥2888.00</div>
+                            <div class="btn-container flex">
+                                <button id="wechatBtn" class="bg-white text-green-500 border border-gray-300 rounded-lg py-2 flex items-center">
+                                    <img src="/en/news/xiangqing/payFor/微信.png" alt="" class="mr-2">
+                                    微信支付
+                                </button>
+                            
+                                <button id="alipayBtn" class="bg-white text-blue-500 border border-gray-300 rounded-lg px-4 py-2 flex items-center">
+                                    <img src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98.png" alt="" class="mr-2">
+                                    支付宝支付
+                                </button>
+                            </div>
+                            <div class="qr-code hidden" id="qrCodeWechat">
+                                <img src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-05%20204257.png" alt="">
+                            </div>
+
+                            <div class="qr-code1" id="qrCodeAlipay">
+                                <img src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E6%94%AF%E4%BB%98%E5%AE%9D.png" alt="">
+                            </div>
+                        
+                        </div>
+
+                        <div id="comment-popup1" style="text-align: center;width: 25rem;height: 25rem;">      
+                            <div class="qr-code1 hidden" id="qrCodeWechat">
+                                <img src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/1.png" alt="">
+                            </div>
+                        </div>
+
+                        <div id="comment-popup2" style="text-align: center;">      
+                            <div class="qr-code1 hidden" id="qrCodeWechat">
+                                <img src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/2.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <!-- 第一页 -->
+                        <div class="mt-6 content active" id="content-all">
+                            <!-- 内容相关于"全部"选项 -->
+                            <div class="mt-6">
+                                <div class="w-full flex items-center" style="margin-bottom: 1rem;">
+                                    <!-- 竖线 -->
+                                    <div class="border-l-4 border-blue-800 h-6 mr-4"></div> <!-- 标题 -->
+                                    <h3 class="font-semibold text-xl text-blue-800">
+                                        选择活动
+                                    </h3>
+                                </div>
+                                <div class="flex mb-4">
+
+                                    <div class="w-1/3">
+                                        <div class="relative">
+                                            <img alt="论坛活动海报，图中有大量的人群和一个巨大的数字9" class="rounded-md"
+                                                src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240316190523.png" />
+
+                                        </div>
+                                    </div>
+                                    <div class="w-2/3">
+                                        <div class="flex justify-between items-start">
+                                            <div style="margin-left: 2rem;">
+                                                <h3 class="font-semibold text-lg text-gray-700">
+                                                    西湖论剑安全特训营·数字安全官高级研修班
+                                                </h3>
+                                                <p class="text-sm text-blue-500 mt-2">
+                                                    2023.5.5 18:00-21:00
+                                                </p>
+                                                <p class="text-sm text-gray-600 mt-2" style="width: 50rem;line-height: 1.5rem;">
+                                                    本次培训面向网络安全从业人员，特别是负责网络安全防护的蓝队人员，以及有意向从事蓝队工作的人员。 培训所需具备的基础能力：应具备网络安全的基本知识，了解常见的网络攻击手法和防御策略本次培训面向网络安全从业人员，特别是负责网络安全防护的蓝队人员，以及有意向从事蓝队工作的人员。 培训所需具备的基础能力：应具备网络安全的基本知识，了解常见的网络攻击手法和防御策略本次培训面向网络安全从业人员，特别是负责网络安全防护的蓝队人员，以及有意向从事蓝队工作的人员。特别是负责网络安全防护的蓝队人员，以及有意向从事蓝队工作的人员。 培训所需具备的基础能力：应具备网络安全的基本知识，了解常见的网络攻击手法和防御策略本次培训面向网络安全从业人员。
+                                                </p>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                
+                                                <!-- <a class="subscribe-link" class="text-white px-3 py-1 text-xs rounded"
+                                                    style="color: #efbc06;font-size: 16px;">
+                                                    收藏⭐
+                                                </a> -->
+                                                <!-- <a id="button-style" onclick="togglePopup()" href="#">
+                                                    在线支付
+                                                </a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center p-6 bg-white shadow-md">
+                                <div class="flex items-center">
+                                    <div class="bg-gray-100 p-4 rounded-lg mr-4">
+                                        <p class="text-gray-800 text-lg">活动票种</p>
+                                        <div class="flex mt-2">
+                                            <button class="bg-white text-gray-800 border border-blue-500 rounded-lg px-4 py-2 mr-2">线上基础课 ¥2,888</button>
+                                            <button class="bg-white text-gray-800 border border-gray-300 rounded-lg px-4 py-2 mr-2">线下技能课 ¥12,888</button>
+                                            <button class="bg-white text-gray-800 border border-gray-300 rounded-lg px-4 py-2">线上+线下2门 ¥12,888</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <!-- <button class="bg-yellow-400 text-yellow-800 rounded-full px-6 py-2 mr-4 font-bold">收藏 23</button> -->
+                                    <a class="subscribe-link" class="bg-yellow-400 text-yellow-800 border-yellow-800 rounded-full px-6 py-2 mr-4 font-bold"
+                                                    >
+                                                    收藏⭐
+                                    </a>
+                                    <a id="button-style" onclick="togglePopup()" href="#">
+                                                    在线支付
+                                    </a>
+                                    <!-- <button class="bg-green-500 text-white rounded-full px-6 py-2 font-bold">立即支付</button> -->
+                                </div>
+                                <div class="flex items-center" style="margin-right: 8rem; margin-top: 2rem;">
+                                    <p class="text-gray-600 mr-4">4659 人浏览</p>
+                                    <p class="text-gray-600 mr-4">分享到</p>
+                                    <!-- <button class="text-green-500 mr-2"><i class="fas fa-comment-dots"></i></button> -->
+                                    <a class="text-green-500 mr-2" onclick="togglePopup1()" href="#">
+                                        <img src="weixin1.png" alt="">
+                                    </a>
+
+                                    <!-- <a class="text-green-500"><i class="fas fa-phone"></i></a> -->
+                                    <a class="text-green-500" onclick="togglePopup2()" href="#">
+                                        <img src="weixin.png" alt="">
+                                    </a>                                    
+                                    
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+<script>
+
+
+
+    // 获取所有具有.subscribe-link类的元素
+    const subscribeLinks = document.querySelectorAll('.subscribe-link');
+
+    // 遍历每个元素，并为其添加点击事件监听器
+    subscribeLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            // 检查链接文本内容是否为"订阅"
+            if (this.textContent.trim() === '收藏⭐') {
+                // 如果是，将文本内容改为"已订阅"
+                this.textContent = '已收藏';
+            } else {
+                // 否则，将文本内容改回"订阅"
+                this.textContent = '收藏⭐';
+            }
+        });
+    });
+
+
+
+
+    // document.getElementById('button-style').addEventListener('click', function(event) {
+    //     event.preventDefault(); // Prevent the default action of the link
+    //     document.getElementById('comment-popup').style.display = ''; // Show the popup
+    //   });
+
+
+    var flag = 0;
+    function togglePopup() {
+        // 获取弹窗元素
+        var comment_popup = document.getElementById("comment-popup");
+        // 切换弹窗的显示
+        comment_popup.style.display = "block";
+        flag = 1;
+        document.addEventListener('click', closePopupOutside);
+    }
+
+    function closePopupOutside(event) {
+        // 获取点击事件的目标元素
+        var target = event.target;
+        console.log("target:" + target);
+
+        var comment_popup = document.getElementById("comment-popup");
+        // 检查点击事件的目标元素是否在弹窗内
+        if (!comment_popup.contains(target) && flag != 1) {
+            // 如果不在弹窗内，就关闭弹窗
+            comment_popup.style.display = "none";
+            // 移除点击页面其他部分关闭弹窗的监听器
+            document.removeEventListener('click', closePopupOutside);
+        }
+        flag = 0;
+    }
+
+
+    // var flag = 0;
+    // function togglePopup1() {
+    //     // 获取弹窗元素
+    //     var comment_popup1 = document.getElementById("comment-popup1");
+    //     // 切换弹窗的显示
+    //     comment_popup.style.display = "block";
+    //     flag = 1;
+    //     document.addEventListener('click', closePopupOutside);
+    // }
+
+    // function closePopupOutside(event) {
+    //     // 获取点击事件的目标元素
+    //     var target = event.target;
+    //     console.log("target:" + target);
+
+    //     var comment_popup = document.getElementById("comment-popup1");
+    //     // 检查点击事件的目标元素是否在弹窗内
+    //     if (!comment_popup.contains(target) && flag != 1) {
+    //         // 如果不在弹窗内，就关闭弹窗
+    //         comment_popup.style.display = "none";
+    //         // 移除点击页面其他部分关闭弹窗的监听器
+    //         document.removeEventListener('click', closePopupOutside);
+    //     }
+    //     flag = 0;
+    // }
+
+
+    const wechatBtn = document.getElementById('wechatBtn');
+    const alipayBtn = document.getElementById('alipayBtn');
+    const qrCodeWechat = document.getElementById('qrCodeWechat');
+    const qrCodeAlipay = document.getElementById('qrCodeAlipay');
+
+    wechatBtn.addEventListener('click', function() {
+        qrCodeWechat.classList.remove('hidden');
+        qrCodeAlipay.classList.add('hidden');
+    });
+
+    alipayBtn.addEventListener('click', function() {
+        qrCodeWechat.classList.add('hidden');
+        qrCodeAlipay.classList.remove('hidden');
+    });
+</script>
+
+</html>

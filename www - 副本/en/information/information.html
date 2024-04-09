@@ -1,0 +1,815 @@
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   个人中心 |2024西湖论剑·数字安全大会
+  </title>
+  <link rel="stylesheet" href="/public/dist/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <style>
+   body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .semi-transparent-bg {
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+    .h-64{
+        margin-top: 5rem;
+    }
+    .space-x-4 a{
+        color:#004A99 ;
+        font-weight: bold;
+    }
+
+    .denglu {
+            color: aliceblue;
+            font-weight: bold;
+            font-size: 14px;
+            position: relative;
+            left: 1.7rem;
+        }
+
+        .DL {
+            width: 100PX;
+            height: 30PX;
+            padding: 3px 8px;
+            border-radius: 1.5rem;
+            background-color: #004A99;
+            position: relative;
+            left: 3.3rem;
+            top: -0.21em;
+        }
+        header{
+            height: 6rem;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header img{
+            width: 230px;
+            height: 73px;
+            position: relative;
+            left: 1.7rem;
+            top: -0.2rem;
+        }
+        nav{
+            position: relative;
+            left: -1.5rem;
+            top: -0.3rem;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        nav a {
+            position: relative;
+            padding-right: 0.85rem !important;
+        }
+    .space-x-4 a:hover{
+        color:#678aac ;
+    }
+    .DL:hover{
+        background-color:rgb(36, 44, 67) ;
+    }
+
+    #category-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#category-list li {
+    list-style: none;
+    background-color: white;
+    border: 1px solid #d4d4d4;
+    box-shadow: 0 3px 2px rgba(2, 43, 250, 0.2); /* 调整阴影参数 */
+    color: #15354a;
+    padding: 10px;
+    margin: 10px;
+    width: 130px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#category-list li.active {
+        background-color: #1E3A8A;
+        color: white;
+    }
+
+    .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .subscribe-link{
+    position: relative;
+    left: 800px;
+    top: -150px;
+}
+
+.form-group {
+		margin-bottom: 20px;
+	}
+
+    #button-style {
+        width: 100px;
+        height: 30px;
+        display: inline-block;
+        padding: 3px 16px;
+        background-color: #385093;
+        border: 1px solid #36529d;
+        color: #fcfdfe;
+        text-decoration: none;
+        border-radius: 1.5rem;
+        position: relative;
+        top: 150px;
+    }
+
+    #button-style:hover {
+        background-color: #303237;
+        color: #d4d4d4;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #comment-popup {
+display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 9999999999;
+  }
+
+  #comment-popup h2 {
+    margin-top: 0;
+  }
+
+
+  .form-group {
+		margin-bottom: 10px;
+        display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+	}
+    label {
+		font-weight: bold;
+        flex: 1;
+    margin-right: 10px;
+	}
+
+	input[type="text"],
+	textarea {
+		width: 100%;
+		padding: 8px;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+        flex: 2;
+	}
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		margin-right: 5px;
+	}
+
+	.form-group button {
+		padding: 10px 20px;
+		background-color: #004A99;
+		color: white;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		font-size: 14px;
+	}
+
+	.form-group button:hover {
+		background-color: #01060c;
+	}
+
+	label.required::before {
+		content: "*";
+		color: red;
+		margin-right: 5px;
+	}
+
+    #sub_weibo {
+		padding: 10px 20px;
+		background-color: #004A99;
+		color: white;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+
+	#sub_weibo:hover {
+		background-color: #01060c;
+	}
+    .Title .title {
+            text-align: center;
+            /* margin-left: 10rem; */
+            /* margin-top: 10rem; */
+            padding-top: 4rem;
+        }
+
+        .Title .title {
+            color: #fafcfd;
+            /* margin-bottom: 4rem; */
+        }
+
+        .Title .title h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .Title .title span:last-child {
+            font-size: 1.2rem;
+        }
+
+        .huodong {
+            margin-top: 7rem;
+        }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-blue-200 to-white">
+
+    <div class="fixed w-full z-10 top-0">
+        <header class="bg-white shadow-md">
+         <div class="container mx-auto flex justify-between items-center py-4 px-6">
+          <img alt="2023西湖数字安全会议 Logo" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240311212919.png"/>
+          <nav class="flex space-x-4">
+           <a class="text-blue-600 font-semibold" href="http://127.0.0.1:5500/index.html#">
+            首页
+           </a>
+           <a class="text-gray-600" href="/en/yicheng/yicheng.html">
+            大会议程
+           </a>
+           <a class="text-gray-600" href="/en/daka/zj.html">
+            大咖云集
+           </a>
+           <a class="text-gray-600" href="/en/news/jchd.html">
+            精彩活动
+           </a>
+           <a class="text-gray-600" href="/en/zhanshang/zhanshang.html">
+            展商风采
+           </a>
+           <a class="text-gray-600" href="/en/black-1/1.html">
+            成果发布
+           </a>
+           <a class="text-gray-600" href="/en/meiti/meiti.html">
+            媒体中心
+           </a>
+           <a class="text-gray-600" href="/en/zhibo/Zhibo1.html">
+            大会直播
+           </a>
+           <a class="text-gray-600" href="/en/information/information.html">
+            个人中心
+          </a>
+          </nav>
+          <div class="DL">
+          <button class="denglu" href="#popover-login" accent tiny>
+            登录
+            </button>
+        </div>
+          <div class="flex items-center space-x-2">
+           <button class="text-gray-600">
+            <i class="fas fa-search">
+            </i>
+           </button>
+           <button class="text-gray-600">
+            <i class="fas fa-user-circle">
+            </i>
+           </button>
+          </div>
+         </div>
+        </header>
+       </div>
+
+   </div>
+  </div>
+
+  
+
+  <div class="bg-blue-900 h-64">
+    <div class="Title">
+        <div id="liangdian" data-wow-duration="1s"
+            class="title wow animate__animated animate__fadeInDown"
+            style="visibility: visible; animation-duration: 1s;">
+            <h1>个人中心</h1> <span>2024西湖论剑·数字安全大会</span>
+        </div>
+    </div>
+</div>
+<div class="flex justify-between items-start px-20 -mt-11">
+    <div class="bg-white w-1/4 p-5">
+        <div class="bg-white text-2xl mb-5"></div>
+        <form id="survey-form" style="margin-left: 60px;">
+            <!-- 企业名称(填空) -->
+            <div class="form-group">
+                <img  src="" alt="">
+                <label for="question1" style="font-size: 32px;">4U.</label>
+            </div>
+            <!-- 联系人 -->
+            <div class="form-group">
+                <label class="required" for="question1">我的积分</label>
+                <label style="position: relative;left: -115px;top: 45px;font-size: xx-large;" for="question1">700</label>         
+            </div>
+            <!-- <a class=".subscribe-link" style="position: relative;top: -10px; margin-top: 60px;margin-bottom: 15px;" id="button-style" href="#">
+                每日签到
+            </a>  -->
+            <a id="button-style" class="subscribe-link" class="text-white px-3 py-1 text-xs rounded"
+                                                    style="color: #f9fafc;font-size: 14px;position: relative;top: -20px; left: 0px;margin-top: 65px;margin-bottom: 10px;">
+                                                    每日签到
+            </a> 
+            <!-- 邮编 -->
+            <div class="form-group">
+                <label for="question2">公司</label>
+            </div>
+            <!-- 职位 -->
+            <div class="form-group">
+                <label for="question2">部门</label>
+            </div>
+             <!-- 职位 -->
+             <div class="form-group">
+                <label for="question2">职位</label>
+            </div>
+             <!-- 职位 -->
+             <div class="form-group">
+                <label for="question2">联系电话</label>
+            </div>
+             <!-- 职位 -->
+             <div class="form-group">
+                <label for="question2">邮箱</label>
+            </div>
+            <a style="position: relative;top: 10px;" id="button-style" onclick="togglePopup()" href="#">
+                修改资料
+            </a>
+
+
+        </form>
+    </div>
+
+
+
+    <div id="comment-popup" style="text-align: center;">
+        <h1 style="font-size: 24px;">修改资料</h1>
+        <form id="survey-form">
+            <!-- 企业名称(填空) -->
+            <div class="form-group">
+                <label class="required" for="question1">姓名：</label>
+                <input type="text" id="question1" name="question1" required>
+            </div>
+            <!-- 联系人 -->
+            <div class="form-group">
+                <label class="required" for="question1">公司：</label>
+                <input type="text" id="question1" name="question1" required>
+            </div>
+            <!-- 联系人电话 -->
+            <div class="form-group">
+                <label class="required" for="question1">部门：</label>
+                <input type="text" id="question1" name="question1" required>
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label class="required" for="question2">职位：</label>
+                <input type="text" id="question2" name="question2" required>
+            </div>
+            <!-- 邮编 -->
+            <div class="form-group">
+                <label class="required" for="question2">手机号码：</label>
+                <input type="text" id="question2" name="question2" required>
+            </div>
+            <!-- 职位 -->
+            <div class="form-group">
+                <label class="required" for="question2">邮箱地址：</label>
+                <input type="text" id="question2" name="question2" required>
+            </div>
+
+            
+            <!-- 提交按钮 -->
+            <div class="form-group">
+                <button type="submit" id="sub_weibo">提交</button>
+            </div>
+        </form>
+      </div>
+
+
+
+
+    <div class="bg-white w-3/4 p-5">
+        <div class="mt-6 content active" id="content-all">
+
+            <div class="flex justify-center space-x-2 mb-4" style="margin-top: 2rem;margin-left: -41rem;">
+                <!-- Buttons -->
+                <!-- 竖线 -->
+                <div class="border-l-4 border-blue-800 h-7 mr-4"></div> <!-- 标题 -->
+                <button class="toggle-btn text-blue-900 px-4 py-2 rounded-full" data-target="news" style="font-size: 24px;">
+                 我的订阅
+                </button>
+                <button class="toggle-btn text-blue-900 px-4 py-2 rounded-full" data-target="picture" style="font-size: 24px;">
+                 我的积分
+                </button>
+                
+         </div>
+
+         <div id="news" class="committee-list mt-6  grid grid-cols-3 gap-6">
+
+
+            <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <img alt="论坛活动海报，图中有大量的人群和一个巨大的数字9" class="rounded-md" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240317160250.png"/>
+                <p class="text-sm mt-2">
+                 4444444
+                </p>
+                <p class="text-xs text-gray-500">
+                 腾讯科技（深圳）有限公司 高级研究员
+                </p>
+                <a href="/en/daka/2page.html" class="mt-2">
+                    <span class="text-blue-500">
+                     <i class="fas fa-play-circle">
+                     </i>
+                    </span>
+                    <span class="text-gray-400 text-xs">
+                     20+
+                    </span>
+                   </a>
+               </div>
+           
+            <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <img alt="技术峰会海报，图中有一个蓝色的大脑图案和光纤连接" class="rounded-md" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240317160253.png"/>
+                <p class="text-sm mt-2">
+                 4444444
+                </p>
+                <p class="text-xs text-gray-500">
+                 腾讯科技（深圳）有限公司 高级研究员
+                </p>
+                <a href="/en/daka/2page.html" class="mt-2">
+                    <span class="text-blue-500">
+                     <i class="fas fa-play-circle">
+                     </i>
+                    </span>
+                    <span class="text-gray-400 text-xs">
+                     20+
+                    </span>
+                   </a>
+               </div>
+
+               <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <img alt="技术峰会海报，图中有一个蓝色的大脑图案和光纤连接" class="rounded-md" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240317160253.png"/>
+                <p class="text-sm mt-2">
+                 4444444
+                </p>
+                <p class="text-xs text-gray-500">
+                 腾讯科技（深圳）有限公司 高级研究员
+                </p>
+                <a href="/en/daka/2page.html" class="mt-2">
+                    <span class="text-blue-500">
+                     <i class="fas fa-play-circle">
+                     </i>
+                    </span>
+                    <span class="text-gray-400 text-xs">
+                     20+
+                    </span>
+                   </a>
+               </div>
+
+               <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <img alt="技术峰会海报，图中有一个蓝色的大脑图案和光纤连接" class="rounded-md" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240317160253.png"/>
+                <p class="text-sm mt-2">
+                 4444444
+                </p>
+                <p class="text-xs text-gray-500">
+                 腾讯科技（深圳）有限公司 高级研究员
+                </p>
+                <a href="/en/daka/2page.html" class="mt-2">
+                    <span class="text-blue-500">
+                     <i class="fas fa-play-circle">
+                     </i>
+                    </span>
+                    <span class="text-gray-400 text-xs">
+                     20+
+                    </span>
+                   </a>
+               </div>
+
+               <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <img alt="技术峰会海报，图中有一个蓝色的大脑图案和光纤连接" class="rounded-md" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240317160253.png"/>
+                <p class="text-sm mt-2">
+                 4444444
+                </p>
+                <p class="text-xs text-gray-500">
+                 腾讯科技（深圳）有限公司 高级研究员
+                </p>
+                <a href="/en/daka/2page.html" class="mt-2">
+                    <span class="text-blue-500">
+                     <i class="fas fa-play-circle">
+                     </i>
+                    </span>
+                    <span class="text-gray-400 text-xs">
+                     20+
+                    </span>
+                   </a>
+               </div>
+    
+
+    
+    
+           </div>
+    
+        <!-- 图片 -->
+           <div id="picture" class="committee-list hidden">
+    
+            <div class="flex justify-center space-x-2 mb-4">
+                <!-- Buttons -->
+                <button class="toggle-btn bg-blue-500 text-white px-4 py-2 rounded-full" data-target="all">
+                  积分规则
+                </button>
+                <button class="toggle-btn text-blue-500 px-4 py-2 rounded-full border border-blue-500" data-target="theme">
+                  积分兑换
+                </button>
+                <button class="toggle-btn text-blue-500 px-4 py-2 rounded-full border border-blue-500" data-target="may5">
+                  积分明细
+                </button>
+              </div>
+    
+    
+        <div class="grid grid-cols-4 gap-6 mt-6">
+    
+            <div id="all" class="committee-list grid grid-cols-4 gap-6">
+            
+                <!-- Committee members for "全部" -->
+                <!-- ... -->
+                <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                    <p class="text-sm mt-2">
+                     000000000
+                    </p>
+                   </div>
+        
+                  
+              </div>
+    
+               <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <img alt="Speaker with a microphone, wearing a suit" class="mx-auto" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240317161612.png"/>
+                <p class="text-sm mt-2">
+                 4444444
+                </p>
+                <p class="text-xs text-gray-500">
+                 腾讯科技（深圳）有限公司 高级研究员
+                </p>
+                <a href="/en/daka/2page.html" class="mt-2">
+                    <span class="text-blue-500">
+                     <i class="fas fa-play-circle">
+                     </i>
+                    </span>
+                    <span class="text-gray-400 text-xs">
+                     20+
+                    </span>
+                   </a>
+               </div>
+    
+               <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <img alt="Speaker with a microphone, wearing a suit" class="mx-auto" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240317161612.png"/>
+                <p class="text-sm mt-2">
+                 4444444
+                </p>
+                <p class="text-xs text-gray-500">
+                 腾讯科技（深圳）有限公司 高级研究员
+                </p>
+                <a href="/en/daka/2page.html" class="mt-2">
+                    <span class="text-blue-500">
+                     <i class="fas fa-play-circle">
+                     </i>
+                    </span>
+                    <span class="text-gray-400 text-xs">
+                     20+
+                    </span>
+                   </a>
+               </div>
+    
+               <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <img alt="Speaker with a microphone, wearing a suit" class="mx-auto" src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240317161612.png"/>
+                <p class="text-sm mt-2">
+                 4444444
+                </p>
+                <p class="text-xs text-gray-500">
+                 腾讯科技（深圳）有限公司 高级研究员
+                </p>
+                <a href="/en/daka/2page.html" class="mt-2">
+                    <span class="text-blue-500">
+                     <i class="fas fa-play-circle">
+                     </i>
+                    </span>
+                    <span class="text-gray-400 text-xs">
+                     20+
+                    </span>
+                   </a>
+               </div>
+            </div>
+           </div>
+
+    
+           <div id="all" class="committee-list grid grid-cols-4 gap-6">
+            
+            <!-- Committee members for "全部" -->
+            <!-- ... -->
+            <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <p class="text-sm mt-2">
+                 000000000
+                </p>
+               </div>
+    
+              
+          </div>
+    
+        
+    
+          <div id="theme" class="committee-list hidden grid grid-cols-4 gap-6">
+            <!-- Committee members for "主题演讲（视频）" -->
+            <!-- ... -->
+            <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <p class="text-sm mt-2">
+                 11111111
+                </p>
+                
+               </div>
+          </div>
+    
+        
+          <div id="may5" class="committee-list hidden grid grid-cols-4 gap-6">
+            <!-- Committee members for "5月5日" -->
+            <!-- ... -->
+            <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                <p class="text-sm mt-2">
+                 22222222
+                </p>
+               </div>
+    
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+</div>
+
+
+
+
+
+
+
+</div>
+ </body>
+
+ <script>
+   const toggleBtns = document.querySelectorAll('.toggle-btn');
+    const committeeLists = document.querySelectorAll('.committee-list');
+
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const target = this.dataset.target;
+        committeeLists.forEach(list => {
+          if (list.id === target) {
+            list.classList.remove('hidden');
+          } else {
+            list.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+
+
+
+// 获取所有具有.subscribe-link类的元素
+const subscribeLinks = document.querySelectorAll('.subscribe-link');
+
+// 遍历每个元素，并为其添加点击事件监听器
+subscribeLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // 检查链接文本内容是否为"订阅"
+        if (this.textContent.trim() === '每日签到') {
+            // 如果是，将文本内容改为"已订阅"
+            this.textContent = '已签到 !';
+        } else {
+            // 否则，将文本内容改回"订阅"
+            this.textContent = '每日签到';
+        }
+    });
+});
+
+
+
+
+
+// 初始显示积分规则页面
+document.getElementById('all').classList.remove('hidden');
+
+const buttons = document.querySelectorAll('.toggle-btn');
+const pages = document.querySelectorAll('.committee-list');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const target = button.getAttribute('data-target');
+        
+        // 隐藏所有页面
+        pages.forEach(page => {
+            page.classList.add('hidden');
+        });
+
+        // 显示目标页面
+        document.getElementById(target).classList.remove('hidden');
+    });
+});
+
+
+
+
+
+
+var flag=0;
+	function togglePopup() {
+		// 获取弹窗元素
+		var comment_popup = document.getElementById("comment-popup");
+		// 切换弹窗的显示
+		comment_popup.style.display = "block";
+		flag=1;
+		document.addEventListener('click', closePopupOutside);
+	}
+
+	function closePopupOutside(event) {
+		// 获取点击事件的目标元素
+		var target = event.target;
+		console.log("target:" + target);
+		
+		var comment_popup = document.getElementById("comment-popup");
+		// 检查点击事件的目标元素是否在弹窗内
+		if (!comment_popup.contains(target) && flag!=1) {
+			// 如果不在弹窗内，就关闭弹窗
+			comment_popup.style.display = "none";
+			// 移除点击页面其他部分关闭弹窗的监听器
+			document.removeEventListener('click', closePopupOutside);
+		}
+		flag=0;
+	}
+
+
+
+
+
+    new WOW().init();
+ </script>
+</html>

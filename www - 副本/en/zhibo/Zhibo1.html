@@ -1,0 +1,867 @@
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>
+    活动详情 |2024西湖论剑·数字安全大会
+  </title>
+  <link rel="stylesheet" href="/public/dist/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <script type="text/javascript" src="liveplayer-element.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    .scrollable-y {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .mb-6 img {
+      width: 100%;
+    }
+
+    .space-x-4 a {
+      color: #004A99;
+      font-weight: bold;
+    }
+
+    .denglu {
+            color: aliceblue;
+            font-weight: bold;
+            font-size: 14px;
+            position: relative;
+            left: 1.7rem;
+        }
+
+        .DL {
+            width: 100PX;
+            height: 30PX;
+            padding: 3px 8px;
+            border-radius: 1.5rem;
+            background-color: #004A99;
+            position: relative;
+            left: 3.3rem;
+            top: -0.21em;
+        }
+        header{
+            height: 6rem;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header img{
+            width: 230px;
+            height: 73px;
+            position: relative;
+            left: 1.7rem;
+            top: -0.2rem;
+        }
+        nav{
+            position: relative;
+            left: -1.5rem;
+            top: -0.3rem;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        nav a {
+            position: relative;
+            padding-right: 0.85rem !important;
+        }
+
+    .space-x-4 a:hover {
+      color: #678aac;
+    }
+
+    .DL:hover {
+      background-color: rgb(36, 44, 67);
+    }
+
+    .mb-6 {
+      height: 50px;
+    }
+
+    .mb-6 .title {
+      text-align: center;
+      /* padding-top: 9rem; */
+    }
+
+    .mb-6 .title {
+      color: #004A99;
+      margin-bottom: 4rem;
+    }
+
+    .mb-6 .title h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .mb-6 .title span:last-child {
+      font-size: 1.4rem;
+    }
+
+    .text-gray-600 {
+      color: #718096;
+    }
+
+    .text-red-500 {
+      color: #f56565;
+    }
+
+    .bg-blue-500 {
+      background-color: #4299e1;
+    }
+
+    .text-white {
+      color: #ffffff;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .mr-2 {
+      margin-right: 0.5rem;
+    }
+
+
+    /* 弹窗 */
+    #comment-popup {
+      width: 80%;
+      margin-top: 45rem;
+      margin-left: 10rem;
+    }
+
+
+
+    .reply-form {
+      display: none;
+      /* 默认隐藏 */
+      margin-top: 10px;
+    }
+
+    .reply-form textarea {
+      width: 85%;
+      height: 40px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+    }
+
+    .reply-form input[type="submit"] {
+      background-color: #004A99;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 1px;
+      cursor: pointer;
+      position: relative;
+      top: -40px;
+      left: 60rem;
+      height: 40px;
+    }
+
+    .reply-form input[type="submit"]:hover {
+      background-color: #333;
+    }
+
+    .comment-section {
+      width: 95%;
+      margin: 20px auto;
+    }
+
+    .comment {
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      padding-left: 0.2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .comment-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .comment-header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .comment-header h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .comment-date {
+      font-size: 14px;
+      color: #777;
+      margin-left: 1rem;
+    }
+
+    .comment-content {
+      color: #444;
+      font-size: 16px;
+    }
+
+    .comment-actions {
+      margin-top: 10px;
+    }
+
+    .comment-actions a {
+      color: #007bff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .comment-actions a:hover {
+      text-decoration: underline;
+    }
+
+    .comment-form {
+      margin-top: 10px;
+      margin-bottom: -15px;
+      padding-left: 2rem;
+    }
+
+    .comment-form textarea {
+      width: 85%;
+      height: 50px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+      margin-bottom: 5px;
+    }
+
+    .comment-form input[type="submit"] {
+      background-color: #004A99;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 1px;
+      cursor: pointer;
+      position: relative;
+      top: -55px;
+      left: 60rem;
+      height: 50px;
+    }
+
+    .comment-form input[type="submit"]:hover {
+      background-color: #333;
+    }
+
+
+    /* 设置点赞按钮的样式 */
+    .like-button {
+      cursor: pointer;
+      color: #ccc;
+      /* 初始状态下的颜色 */
+    }
+
+    .like-button:hover {
+      color: #ccc;
+      /* 鼠标悬停时的颜色 */
+    }
+
+    .liked {
+      color: #007bff !important;
+      /* 被点赞后的颜色 */
+    }
+    @keyframes fadeInFromLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* 应用动画到目标内容 */
+    .fadeInLeft {
+        animation: fadeInFromLeft 1s ease-out;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-400 to-blue-200">
+
+  <div class="fixed w-full z-10 top-0">
+    <header class="bg-white shadow-md">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <img alt="2023西湖数字安全会议 Logo"
+          src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240311212919.png" />
+        <nav class="flex space-x-4">
+          <a class="text-blue-600 font-semibold" href="http://127.0.0.1:5500/index.html#">
+            首页
+          </a>
+          <a class="text-gray-600" href="/en/yicheng/yicheng.html">
+            大会议程
+          </a>
+          <a class="text-gray-600" href="/en/daka/zj.html">
+            大咖云集
+          </a>
+          <a class="text-gray-600" href="/en/news/jchd.html">
+            精彩回顾
+          </a>
+          <a class="text-gray-600" href="/en/zhanshang/zhanshang.html">
+            展商风采
+          </a>
+          <a class="text-gray-600" href="/en/black-1/1.html">
+            成果发布
+          </a>
+          <a class="text-gray-600" href="/en/meiti/meiti.html">
+            媒体中心
+          </a>
+          <a class="text-gray-600" href="/en/zhibo/Zhibo1.html">
+            大会直播
+          </a>
+          <a class="text-gray-600" href="/en/information/information.html">
+            个人中心
+          </a>
+
+        </nav>
+        <div class="DL">
+          <button class="denglu" href="#popover-login" accent tiny>
+            登录
+          </button>
+        </div>
+        <div class="flex items-center space-x-2">
+          <button class="text-gray-600">
+            <i class="fas fa-search">
+            </i>
+          </button>
+          <button class="text-gray-600">
+            <i class="fas fa-user-circle">
+            </i>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+
+  <!-- 弹框的 HTML 结构 -->
+  <div id="comment-popup" class="hidden bg-white border border-gray-300 rounded-lg shadow-md p-4 absolute">
+    <!-- 评论内容区域 -->
+    <div class="comment-section">
+      <div class="comment">
+        <div class="comment-header">
+          <img
+            src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240317182923.png"
+            alt="User Avatar">
+          <h3>Tang Doe</h3>
+          <span class="comment-date">发表于： 2024年3月14日</span>
+        </div>
+        <div class="comment-content">
+          <p>关于我们所说的这一论坛，基于网络安全所涉及的讯息提出了一系列详细说明。</p>
+        </div>
+        <div class="comment-actions">
+          <a href="#" class="reply-link">回复</a>
+          <i class="far fa-thumbs-up like-button" onclick="toggleLike(this)"></i>
+        </div>
+
+        <div class="comment-header">
+          <img
+            src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240317182920.png"
+            alt="User Avatar">
+          <h3>John Doe</h3>
+          <span class="comment-date">发表于： 2024年1月1日</span>
+        </div>
+        <div class="comment-content">
+          <p>关于我们所说的这一论坛，基于网络安全所涉及的讯息提出了一系列详细说明。</p>
+        </div>
+        <div class="comment-actions">
+          <a href="#" class="reply-link">回复</a>
+          <i class="far fa-thumbs-up like-button" onclick="toggleLike(this)"></i>
+        </div>
+        <div class="reply-form">
+          <form id="replyForm" action="#" method="post">
+            <textarea name="reply" placeholder="在这里写下您的评论..."></textarea><br>
+            <input type="submit" value="发布">
+          </form>
+        </div>
+      </div>
+      <!-- More comments can go here -->
+    </div>
+
+    <!-- 评论表单 -->
+    <div class="comment-form">
+      <h3>发表评论</h3>
+      <form id="commentForm" action="#" method="post">
+        <textarea name="comment" placeholder="在这里写下您的评论..."></textarea><br>
+        <input type="submit" value="发布">
+      </form>
+    </div>
+  </div>
+
+
+  <div class="container mx-auto px-40 py-40">
+    <div class="flex flex-col space-y-28">
+      <div class="w-full flex items-center fadeInLeft" style="margin-bottom: -6rem;">
+        <!-- 竖线 -->
+        <div class="border-l-4 border-blue-900 h-6 mr-4"></div> <!-- 标题 -->
+        <h3 class="font-semibold text-2xl text-blue-900">
+            观看大会直播
+        </h3>
+    </div>
+      <!-- Upper part with video and schedule -->
+      <div class="flex space-x-4">
+        <!-- Video section -->
+        <div class="w-3/4 bg-white rounded-lg shadow-lg overflow-hidden">
+
+          <div class="relative">
+            <live-player id="player01" video-url="http://kilimanjaro.cn/hls/demo.m3u8" live="false" stretch="true">
+              <div style="position:absolute;left:15px;top:15px;color:#FFF;">自定义叠加层</div>
+            </live-player>
+          </div>
+
+
+          <div class="p-4">
+            <div class="flex justify-between items-center">
+              <h2 class="text-2xl font-bold">
+                最火力量
+              </h2>
+
+              <div class="flex items-center">
+                <span id="comment-trigger" class="text-gray-600 mr-2 px-4">
+                  <i class="fas fa-comment"></i> <!-- 使用 Font Awesome 的评论图标 -->
+                  评论留言
+                </span>
+                <span id="eye-icon" class="text-gray-600 mr-2">
+                  2590
+                </span>
+                <i id="eye" class="fas fa-eye text-gray-600 mr-4"></i>
+                <i id="heart" class="far fa-heart text-gray-600 mr-2"></i>
+                <span id="heart-icon" class="text-gray-600">
+                  7
+                </span>
+              </div>
+
+            </div>
+            <p class="text-gray-600 mt-2">
+              科技论坛 @科技论坛
+            </p>
+            <div class="flex mt-4">
+              <button id="subscribe-btn" class="bg-blue-500 text-white py-2 px-4 rounded-lg mr-2"
+                style="border-color: #004A99;">
+                订阅
+              </button>
+
+              <button class="bg-blue-500 text-gray-800 py-2 px-4 rounded-lg" style="border-color: #004A99;">
+                <a
+                  href="https://app-martech.dbappsecurity.com.cn/survey/index/index?suveryid=53&pf_uid=17709_1776&pf_type=3&wx_id=1776">PPT下载</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Schedule section -->
+        <div class="w-1/4 bg-white rounded-lg shadow-lg scrollable-y">
+          <div class="p-4" style="height: 800px;">
+            <h3 class="text-xl font-bold mb-4">
+              会议议程
+            </h3>
+            <div class="text-sm space-y-2">
+              <!-- Repeat this block for each schedule item -->
+              <div class="flex justify-between">
+                <span>
+                  18:30 - 18:55
+                </span>
+                <span>
+                  科技和未来
+                </span>
+              </div>
+              <div class="flex justify-between">
+                <span>
+                  18:55 - 19:20
+                </span>
+                <span>
+                  新科学面对新挑战
+                </span>
+              </div>
+              <div class="flex justify-between">
+                <span>
+                  19:20 - 19:45
+                </span>
+                <span>
+                  AI时代的未来
+                </span>
+              </div>
+              <div class="flex justify-between">
+                <span>
+                  19:45 - 20:15
+                </span>
+                <span>
+                  创新科技：人工智能的力量
+                </span>
+              </div>
+              <div class="flex justify-between">
+                <span>
+                  20:15 - 20:40
+                </span>
+                <span>
+                  智能交通
+                </span>
+              </div>
+              <!-- ... other schedule items ... -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="text-center mb-6">
+        <div id="liangdian" data-wow-duration="1s" class="title wow animate__animated animate__fadeInDown"
+          style="visibility: visible; animation-duration: 1s;">
+          <h1>会议推荐</h1> <span>Conference Highlights</span>
+        </div>
+      </div>
+
+      <!-- Lower part with meeting recommendations -->
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <img alt="Panel discussion with three participants" class="rounded-lg w-full h-32 object-cover"
+            src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240316193045.png" />
+          <h3 class="mt-2 font-medium">
+            第二场面对面-2
+          </h3>
+          <button class="play-btn bg-blue-500 text-white py-2 px-4 rounded-lg mt-2 w-full">
+            立即播放
+          </button>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <img alt="Panel discussion with two participants" class="rounded-lg w-full h-32 object-cover"
+            src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240316193050.png" />
+          <h3 class="mt-2 font-medium">
+            第二场面对面-1
+          </h3>
+          <button class="play-btn bg-blue-500 text-white py-2 px-4 rounded-lg mt-2 w-full">
+            立即播放
+          </button>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <img alt="Speaker presenting with a HOT topic graphic overlay" class="rounded-lg w-full h-32 object-cover"
+            src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240316193053.png" />
+          <h3 class="mt-2 font-medium">
+            新时代新科学家大会现场直播
+          </h3>
+          <button class="play-btn bg-blue-500 text-white py-2 px-4 rounded-lg mt-2 w-full">
+            立即播放
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const eyeIcon = document.getElementById('eye-icon');
+  const heartIcon = document.getElementById('heart-icon');
+  const eye = document.getElementById('eye');
+  const heart = document.getElementById('heart');
+
+  let eyeCount = parseInt(eyeIcon.textContent);
+  let heartCount = parseInt(heartIcon.textContent);
+
+  eye.addEventListener('click', function () {
+    eye.classList.toggle('text-yellow-500'); // Toggle yellow color
+    if (eye.classList.contains('text-yellow-500')) {
+      eyeIcon.textContent = ++eyeCount;
+    } else {
+      eyeIcon.textContent = --eyeCount;
+    }
+  });
+
+  heart.addEventListener('click', function () {
+    heart.classList.toggle('far'); // Toggle outline heart
+    heart.classList.toggle('fas'); // Toggle solid heart
+    heart.classList.toggle('text-red-500'); // Toggle red color
+    if (heart.classList.contains('fas')) {
+      heartIcon.textContent = ++heartCount;
+    } else {
+      heartIcon.textContent = --heartCount;
+    }
+  });
+
+  const subscribeLinks = document.querySelectorAll('.subscribe-link');
+
+  const subscribeBtn = document.getElementById('subscribe-btn');
+
+  subscribeBtn.addEventListener('click', function () {
+    if (this.textContent.trim() === '订阅') {
+      this.textContent = '已订阅';
+    } else {
+      this.textContent = '订阅';
+    }
+  });
+
+  // const videoPlayer = document.getElementById('video-player');
+
+  //     function playVideo(index) {
+  //       switch (index) {
+  //         case 0:
+  //           videoPlayer.src = 'files/files/mainstage/hannovermesse/mainstage_video_l-hannovermesse.mp4';
+  //           break;
+  //         case 1:
+  //           // 添加第二个按钮对应的视频源
+  //           break;
+  //         case 2:
+  //           // 添加第三个按钮对应的视频源
+  //           break;
+  //         default:
+  //           break;
+  //       }
+  //       // 播放视频
+  //       videoPlayer.play();
+
+  //       // 滚动页面到视频播放器位置
+  //       videoPlayer.scrollIntoView({ behavior: 'smooth' });
+  //     }
+
+  document.querySelectorAll('.play-btn').forEach((button, index) => {
+    button.addEventListener('click', function () {
+      switch (index) {
+        case 0:
+          // 添加第一个按钮对应的视频源
+          break;
+        case 1:
+          // 添加第二个按钮对应的视频源
+          break;
+        case 2:
+          // 添加第三个按钮对应的视频源
+          break;
+        default:
+          break;
+      }
+
+      // 获取页面顶部的位置
+      const topPosition = 0;
+
+      // 平滑滚动页面到顶部
+      window.scrollTo({
+        top: topPosition,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+
+
+  const commentTrigger = document.getElementById('comment-trigger');
+  const commentPopup = document.getElementById('comment-popup');
+  const userCommentInput = document.getElementById('user-comment');
+  const publishBtn = document.getElementById('publish-btn');
+
+  // 点击评论图标触发事件
+  commentTrigger.addEventListener('click', function () {
+    // 显示弹框
+    commentPopup.classList.remove('hidden');
+  });
+
+
+
+  // 点击弹框外部区域关闭弹框
+  document.addEventListener('click', function (event) {
+    if (!commentPopup.contains(event.target) && event.target !== commentTrigger) {
+      commentPopup.classList.add('hidden');
+    }
+  });
+
+
+
+
+  // 切换点赞状态的函数
+  function toggleLike(element) {
+    // 如果按钮当前处于点赞状态，则取消点赞；否则，点赞
+    if (element.classList.contains("liked")) {
+      element.classList.remove("liked");
+    } else {
+      element.classList.add("liked");
+    }
+  }
+
+
+
+
+
+
+
+  // 评论提交表单
+  document.getElementById("commentForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // 阻止表单提交默认行为
+
+    // 获取评论内容
+    var commentText = this.querySelector("textarea").value;
+
+    // 创建新评论元素
+    var newComment = document.createElement("div");
+    newComment.className = "comment";
+    newComment.innerHTML = `
+            <div class="comment-header">
+                <img src="https://typora4188.oss-cn-hangzhou.aliyuncs.com/Typora/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-03-18%20190359.png" alt="User Avatar">
+                <h3>西湖论剑</h3>
+                <span class="comment-date">${formatDate(new Date())}</span>
+            </div>
+            <div class="comment-content">
+                <p>${commentText}</p>
+                <a href="#" class="reply-link">回复 </a> <!-- 添加回复按钮 -->
+                <i class="far fa-thumbs-up like-button" onclick="toggleLike(this)"></i>
+            </div>
+            <div class="reply-form"> <!-- 添加回复表单 -->
+                <form action="#" method="post">
+                    <textarea name="reply" placeholder="Write your reply here"></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        `;
+
+    // 将新评论插入到评论区的开头
+    var commentSection = document.querySelector(".comment-section");
+    commentSection.insertBefore(newComment, commentSection.firstChild);
+
+    // 清空评论框
+    this.reset();
+  });
+
+  // 处理回复表单提交
+  document.querySelectorAll(".reply-link").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      var comment = this.closest(".comment");
+      var replyForm = comment.querySelector(".reply-form");
+      toggleDisplay(replyForm);
+    });
+  });
+
+  // 处理回复表单提交
+  document.querySelectorAll(".reply-form").forEach(function (replyForm) {
+    replyForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // 阻止表单提交默认行为
+
+      // 获取回复内容
+      var replyText = this.querySelector("textarea").value;
+
+      // 创建新回复元素
+      var newReply = document.createElement("div");
+      newReply.className = "reply";
+      newReply.innerHTML = `<p>${replyText}</p>`;
+
+      // 为新回复添加样式
+      newReply.style.marginLeft = "20px"; // 例如，向左添加 20px 的间距
+
+      // 将新回复插入到评论内容下方
+      var commentContent = this.previousElementSibling; // 获取评论内容元素
+      commentContent.appendChild(newReply);
+
+      // 清空回复框
+      this.querySelector("textarea").value = "";
+
+      // 隐藏回复表单
+      toggleDisplay(this);
+    });
+  });
+
+  function formatDate(date) {
+    var options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    return new Intl.DateTimeFormat('zh-CN', options).format(date);
+  }
+
+  function toggleDisplay(element) {
+    if (element.style.display === "none" || element.style.display === "") {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  }
+
+
+
+  window.onload = function () {
+    // 页面加载完成以后执行
+    // JavaScript 交互示例, 需要将页面代码放到 http web server 容器下, 通过浏览器 http 协议访问
+    // var player = document.getElementById('player01');
+    // player.addEventListener('snapOutside', evt => {
+    //     console.log('获取快照 base64 数据', evt.detail[0]);
+    // });
+    // console.log(1111);
+    // player.addEventListener('customButtons', evt => {
+    //     console.log('自定义按钮点击回调 按钮名称', evt.detail[0]);
+    // });
+    // player.addEventListener('fullscreen', evt => {
+    //     console.log('fullscreen', evt.detail[0]);
+    // });
+    // player.addEventListener('play', evt => {
+    //     console.log('play, t = ', evt.detail[0] + 's', ', duration = ', player.getVueInstance().getDuration() + 's');
+    // });
+    // var videoUrlBak = "";
+    // document.addEventListener("visibilitychange", () => {
+    //     if (document.visibilityState === 'visible') {
+    //         if(videoUrlBak) {
+    //             console.log("标签页恢复可见, 继续播放...");
+    //             player.setAttribute("video-url", videoUrlBak);
+    //         }
+    //     } else {
+    //         console.log("标签页不可见, 停止播放...");
+    //         videoUrlBak = player.getAttribute("video-url");
+    //         player.setAttribute("video-url", "");
+    //     }
+    // });
+    // setTimeout(() => {
+    //     console.log("快照, 回调 snapOutside...");
+    //     player.getVueInstance().snap();
+    //     console.log("静音...");
+    //     player.getVueInstance().setMuted(true);
+    //     console.log("静音状态: " + player.getVueInstance().getMuted());
+    //     console.log("暂停...");
+    //     player.getVueInstance().pause();
+    //     console.log("暂停状态: " + player.getVueInstance().paused());
+    //     console.log("全屏状态: " + player.getVueInstance().isFullscreen());
+    //     //触发全屏, 需要放置到交互事件回调中
+    //     //btn.onclick = () => { player.getVueInstance().requestFullscreen(); }
+    //     player.getVueInstance().setMuted(false);
+    //     console.log("音量: " + player.getVueInstance().getVolume());
+    //     player.getVueInstance().setVolume(0.5);
+    //     console.log("音量1: " + player.getVueInstance().getVolume());
+    //     player.getVueInstance().setVolume(0.3);
+    //     console.log("音量2: " + player.getVueInstance().getVolume());
+    // }, 3000);
+    // setTimeout(() => {
+    //     console.log("放音...");
+    //     player.getVueInstance().setMuted(false);
+    //     console.log("静音状态: " + player.getVueInstance().getMuted());
+    //     console.log("播放...");
+    //     player.getVueInstance().play();
+    //     console.log("暂停状态: " + player.getVueInstance().paused());
+    // }, 6000);
+    // setTimeout(() => {
+    //     console.log("切换媒体源...");
+    //     player.setAttribute("video-url", "http://kilimanjaro.cn/hls/demo.m3u8");
+    // }, 9000);
+  }
+</script>
+
+</html>
